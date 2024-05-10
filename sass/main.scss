@@ -1,0 +1,233 @@
+/* Variables */
+@import 'mixins';
+$white :#FFFFFF;
+$black :#323232;
+$logocblue :#3491BF;
+$fcolorblue :#007FC1;
+$orange :#F19015;
+$bshowc :#666666;
+$white_bg :rgba(255, 255, 255, 0.48);
+$f_p: 1.01rem;
+$f-h1: 2.5rem;
+
+/* Extender */
+%placement_c{
+    position: absolute;
+    margin: auto;
+    max-width: 100%;
+    z-index: 2;
+}
+@import 'base';
+@import 'header';
+@import 'about';
+@import 'card';
+@import 'service';
+@import 'product';
+@import 'contact';
+@import 'vendor';
+@import 'cisco';
+body{
+    @include poppins-regular;
+    color: $black;
+    font-size: $f_p;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.cover-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Prevents overflow caused by rotation */
+    background-color: #edd9fb;
+}
+.welcome .cover-inner{
+    height: 100vh;
+    z-index: 2;
+}
+.bg-image {
+    position: absolute;
+    width: 100%; height: 100%; /* larger to cover rotation gaps */
+    left: 0;
+    background: linear-gradient(131.56deg, #F0D8FF 41.44%, #45B3FF 89.78%);
+    transition: transform 1s ease-in-out; /* Smooth rotation transition */
+}
+.top-c-img{
+    @extend %placement_c;
+    transition: all 1.5s ease-in-out;
+    top: -80rem;
+    left: 0;
+    right: 0;
+    animation: sunup 500ms;
+    transform: rotate(180deg);
+    @include breakpoint(laptop){
+        top: -64rem;
+    }
+    @include breakpoint(small-device){
+        top: -38rem;
+        max-width: 200%;
+        left: -100%;
+        right: -100%;
+    }
+}
+@keyframes sunup{
+    from{
+        top: -55rem;
+    }
+    to{
+        top: -64rem;
+    }
+}
+@keyframes sundown{
+    from{
+        bottom: -55rem;
+    }
+    to{
+        bottom: -64rem;
+    }
+}
+.bottom-c-img{
+    @extend %placement_c;
+    transition: all 1.5s ease-in-out;
+    bottom: -80rem;
+    left: 0;
+    right: 0;
+    animation: sundown 500ms;
+    @include breakpoint(laptop){
+        bottom: -64rem;
+    }
+    @include breakpoint(small-device){
+        bottom: -40rem;
+        max-width: 200%;
+        left: -100%;
+        right: -100%;
+    }
+}
+.left-c-img{
+    @extend %placement_c;
+    top: 0;
+    left: -120rem;
+    right: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+.right-c-img{
+    @extend %placement_c;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: -120rem;
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+.lefttop{
+    @extend %placement_c;
+    top: -65rem;
+    left: -60rem;
+    transform: rotate(135deg);
+    @include breakpoint(laptop){
+        top: -55rem;
+        left: -45rem;
+    }
+}
+// @keyframes moveRightTop {
+//     from {
+//         top: -65rem;
+//         left: -60rem;
+//         transform: rotate(45deg);
+//         @include breakpoint(laptop){
+//             top: -55rem;
+//             left: -45rem;
+//             transform: rotate(45deg);
+//         }
+//     }
+//     to {
+//         top: -68rem;
+//         right: -60rem;
+//         transform: rotate(-90deg);
+//         @include breakpoint(laptop){
+//             transform: rotate(-90deg);
+//             top: -51rem;
+//             right: -43rem;
+//         }
+//     }
+// }
+.rightbottom{
+    @extend %placement_c;
+    bottom: -65rem;
+    right: -60rem;
+    transform: rotate(-45deg);
+    @include breakpoint(laptop){
+        bottom: -55rem;
+        right: -45rem;
+    }
+}
+.righttop{
+    @extend %placement_c;
+    top: -68rem;
+    right: -60rem;
+    transform: rotate(-90deg);
+    //animation: moveRightTop 1s;
+    @include breakpoint(laptop){
+        top: -51rem;
+        right: -43rem;
+    }
+}
+.leftbottom{
+    @extend %placement_c;
+    bottom: -66rem;
+    left: -66rem;
+    transform: rotate(90deg);
+    @include breakpoint(laptop){
+        bottom: -49rem;
+        left: -45rem;
+    }
+}
+.cover-inner {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68vh;
+}
+.cover-inner .get-data{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    padding: 0px;
+}
+.profile-section{
+    margin-top: 10rem;
+    position: relative;
+    height: 65vh;
+    overflow-y: auto;
+    z-index: 3;
+}
+.team-section{
+    margin-top: 10rem;
+    position: relative;
+    height: 65vh;
+    overflow-y: auto;
+    z-index: 3;
+}
+// .item{
+//     display: none;
+//     align-items: center;
+//     &.active{
+//         display: flex;
+//     }
+//     .col-md-8{
+//         height: 75vh;
+//         overflow-y: auto;
+//         overflow-x: hidden;
+//     }
+// }
+@import 'animation';
+//@import 'owl-carousel';

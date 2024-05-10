@@ -1,0 +1,98 @@
+@import 'mixins';
+.about-page {
+    .left-c-img{
+        left: -170rem;
+    }
+    .right-c-img{
+        right: -170rem;
+    }
+}
+.about.cover-inner{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 10rem;
+    .get-data{
+        position: relative;
+        margin-left: 1rem;
+    }
+}
+.count-text{
+    @include poppins-medium;
+    font-size: 1.5rem;
+    padding: 0rem 1rem;
+    border-right: 1px solid #909090;
+    span{
+        @include poppins-bold;
+    }
+}
+.tab-content{
+    display: none;
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 2rem;
+    &.active{
+        display: flex;
+    }
+}
+.tab-btn-box {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    .btn-cover{
+        background-color: $white_bg;
+        padding: 0.5rem 0.5rem;
+        border-radius: 2rem;
+    }
+}
+.tab-btn{
+    &.active{
+        background-color: $fcolorblue;
+        color: $white;
+    }
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    transition: all 500ms;
+    @include breakpoint(laptop){
+        font-size: .75rem;
+    }
+}
+.h-same-container{
+    display: flex;
+    flex-direction: column;
+}
+.vvbox{
+    background: #FFFFFF33;
+    padding: 1rem;
+    flex: 1;
+    .vv-head{
+        text-align: center;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 40px;
+            margin-right: 0.5em;
+        }
+        span{
+            font-size: 1.25rem;
+            @include poppins-medium;
+            @include breakpoint(laptop){
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .vv-body{
+        p{
+            font-size: 1rem;
+            margin-bottom: 0px;
+            @include breakpoint(laptop){
+                font-size: .75rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.vendors.cover-inner{
+    position: relative;
+    display: block;
+    text-align: left;
+    margin-top: 10rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 68vh;
+    .get-data{
+        position: relative;
+    }
+}
+.section-padding {
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .owl-item .item {
+    transform: translate3d(0, 0, 0);
+    /* DO NOT REMEMBER WHERE TU PUT THIS, SEARCH FOR 3D ACCELERATION */
+    margin: 50px 0;
+    /* OVERWRITE PLUGIN MARGIN */
+  }
+  
+  .screenshot_slider .owl-item .item img {
+    -webkit-transition: 0.3s;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+  }
+  
+  .screenshot_slider .owl-item.center .item img {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    z-index: 2!important;
+  }
+  
+  .screenshot_slider .owl-item.pre-big .item img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    z-index: 1;
+    transform: translateX(-1rem);
+  }
+  .screenshot_slider .owl-item.post-big .item img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    z-index: 1;
+    transform: translateX(1rem);
+  }
+  .screenshot_slider .owl-nav {
+    text-align: center;
+  }
+  
+  .screenshot_slider .owl-nav button {
+    font-size: 24px !important;
+    margin: 10px;
+    color: #033aff !important;
+  }

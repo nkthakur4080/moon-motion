@@ -1,0 +1,22 @@
+{
+  "name": "nk_custom_theme",
+  "version": "1.0.0",
+  "description": "Full screen theme with srcoll page change. ",
+  "main": "index.js",
+  "scripts": {
+    "compile_sass": "node-sass sass/main.scss assets/css/style.css -w"
+  },
+  "keywords": [
+    "Full",
+    "Screen",
+    "template"
+  ],
+  "author": "NK Thakur",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

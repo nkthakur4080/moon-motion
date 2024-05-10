@@ -1,0 +1,152 @@
+.show_img{
+    opacity: 1;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        color: #000;
+    }
+}
+.h3, h3 {
+    font-size: calc(1.1rem + .4vw);
+}
+img{
+    max-width: 100%;
+}
+p{
+    font-size: 1rem;
+    @include breakpoint(laptop){
+        font-size: .75rem;
+    }
+}
+.p-x-15{
+    padding-left: 15vw;
+    padding-right: 15vw;
+    @include breakpoint(laptop){
+        padding-left: 9vw;
+        padding-right: 9vw;
+    }
+}
+/* Button styles */
+.n-btn{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 2.5rem;
+    border: none;
+    background-color: $white;
+    color: $fcolorblue;
+    text-decoration: none;
+    margin: 1rem;
+    width: fit-content;
+    box-shadow: 1px 5px 13px $bshowc;
+    &:hover{
+        color: $fcolorblue;
+    }
+}
+.n-btn-blue{
+    background-color: $logocblue;
+    color:$white;
+    &:hover{
+        color: $white;
+    }
+}
+.btn-owl-close{
+    cursor: pointer;
+    position: relative;
+    margin-left: .75rem;
+}
+.nextpage{
+    padding: 1rem;
+    margin-top: 2rem;
+}
+h1{
+    font-size: $f-h1;
+    @include breakpoint(laptop){
+        font-size: 1.75rem;
+    }
+    .back-icon{
+        &::before{
+            content: " ";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-image: url('../img/svg-icon/left-arrow-circle.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -5%;
+            top: 15%;
+        }
+    }
+}
+h2{
+    font-size: 1.5rem;
+    @include poppins-medium;
+    .back-icon{
+        &::before{
+            content: " ";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-image: url('../img/svg-icon/left-arrow-circle.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -1.5rem;
+            top: 9%;
+        }
+    }
+}
+.typeview {
+    font-size: inherit;
+    font-weight:inherit;
+    color:#0000;
+    background:
+    linear-gradient(-90deg,#F19015 5px,#0000 0) 10px 0,
+    linear-gradient(#000 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
+    animation: 
+    b .5s infinite steps(1),   
+    t calc(var(--n)*.1s) steps(var(--n)) forwards;
+}
+
+h2 {
+    .blink-end{
+        height: 2rem;
+    }
+}
+.blink-end{
+    display: inline-block;
+    width: 5px;
+    height: 3rem;
+    margin-bottom: -.5rem;
+    animation: blink-caret .5s infinite;
+    animation-delay: 5s;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px; /* width of the scrollbar */
+    border-radius: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the track */
+    border-radius: 3px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar handle */
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scrollbar handle on hover */
+  }
+  

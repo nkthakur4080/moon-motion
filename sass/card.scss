@@ -1,0 +1,80 @@
+.card-pro{
+    position: relative;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    .bg-img{
+        width: 100%;
+        border-radius: 15px;
+    }
+    img{
+        &.card-pro-pic{
+            width: 40%;
+            position: absolute;
+            bottom: 2px;
+            left: 2px;
+            border-bottom-left-radius: 15px;
+        }
+    }
+    .card-img-award {
+        position: absolute;
+        width: auto;
+        max-height: 90%;
+        max-width: 40%;
+        top: 0;
+        bottom: 0;
+        left: .5rem;
+        margin: auto;
+    }
+    .award-text{
+        position: absolute;
+        width: auto;
+        height: fit-content;
+        max-width: 50%;
+        top: 0;
+        bottom: 0;
+        right: .5rem;
+        margin: auto;
+        p{
+            margin-bottom: .25rem;
+        }
+        p:last-child{
+            margin-bottom: 0px;
+        }
+    }
+    .card-text{
+        max-width: 60%;
+        position: absolute;
+        right: 1rem;
+        bottom: 0rem;
+        text-align: right;
+        h4{
+            font-size: 1.05rem;
+            color: $fcolorblue;
+            @include breakpoint(laptop){
+                font-size: .9rem;
+            }
+        }    
+    }
+}
+.owl-item{
+    img{
+        &.card-pro-pic{
+            width: 40%;
+            position: absolute;
+            bottom: 2px;
+            left: 2px;
+        }
+    }
+}
+.item-board{
+    align-items: center;
+}
+.owl-nav{
+    float: right;
+    margin-right: 10%;
+}
+.owl-nav img {
+    width: 30px;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #fff0;}

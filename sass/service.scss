@@ -1,0 +1,154 @@
+.gif-bg{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    z-index: 1;
+    height: -webkit-fill-available;
+    width: auto;
+}
+.bg-image{
+    z-index: 2;
+    opacity: .85;
+}
+.service-page {
+    .left-c-img{
+        left: -170rem;
+    }
+    .right-c-img{
+        right: -170rem;
+    }
+}
+.service-in.cover-inner{
+    position: relative;
+    display: flex;
+    text-align: left;
+    margin-top: 10rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 68vh;
+    z-index: 3;
+    .get-data{
+        position: relative;
+        margin-left: 0rem;
+    }
+    .row{
+        justify-content: center;
+    }
+}
+.company-link{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    .com-logo{
+        height: fit-content;
+        position: relative;
+        .bg-com-logo{
+            width: 100%;
+            min-height: 85px;
+        }
+        .c-logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            margin: auto;
+        }
+    }
+    .comp-name{
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+}
+.bg-image{
+    z-index: 2;
+    opacity: .85;
+}
+.ser-item{
+    position: relative;
+}
+.textonowl{
+    position: absolute;
+    font-size: 1.15rem;
+    color: #fff;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    max-width: 40%;
+}
+.service-carousel {
+max-width: 320px;
+}
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom: 5rem;
+    @include breakpoint(laptop){
+        margin-bottom: 2rem;
+    }
+}
+.services .owl-nav{
+    display:none;
+}
+.services img{
+    max-width:100%;
+}
+.services .owl-stage{
+    display:flex;
+}
+.service-1,.service-2,.service-3,.service-4{
+    width:25%;
+    position: relative;
+    overflow:hidden;
+}
+.service-2,.service-3,.service-4{
+    margin-left: -10%;
+}
+/* theme css */
+.owl-theme .owl-nav {
+margin-top: 10px;
+text-align: center;
+-webkit-tap-highlight-color: transparent; }
+.owl-theme .owl-nav [class*='owl-'] {
+color: #FFF;
+font-size: 14px;
+margin: 5px;
+padding: 4px 7px;
+background: #D6D6D6;
+display: inline-block;
+cursor: pointer;
+border-radius: 3px; }
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none; }
+.owl-theme .owl-nav .disabled {
+opacity: 0.5;
+cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+margin-top: 10px; }
+
+.owl-theme .owl-dots {
+text-align: center;
+-webkit-tap-highlight-color: transparent; }
+.owl-theme .owl-dots .owl-dot {
+display: inline-block;
+zoom: 1;
+*display: inline; }
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px; }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791; }

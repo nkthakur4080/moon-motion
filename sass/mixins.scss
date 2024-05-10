@@ -1,0 +1,116 @@
+@import 'font';
+@mixin vendor($property,$value){
+    -ms-#{$property}:$value;
+    -moz-#{$property}:$value;
+    -webkit-#{$property}:$value;
+    #{$property}:$value;
+}
+@mixin transition($property...){
+    @include vendor(transition,$property);
+}
+@mixin transform-origin($property...){
+	@include vendor(transform-origin, $property);
+}
+
+/* flexbox mixin start*/
+@mixin flexbox(){
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+@mixin align-items($property){
+    -webkit-box-align: $property;
+       -ms-flex-align: $property;
+          align-items: $property;
+}
+@mixin justify-content($property){
+    -webkit-box-pack: $property;
+       -ms-flex-pack: $property;
+       justify-content: $property;
+}
+@mixin flex($property){
+    -webkit-box-flex:$property;
+        -ms-flex:$property;
+            flex:$property;
+}
+@mixin flex-wrap($property){
+    -ms-flex-wrap:$property;
+      flex-wrap:$property;
+}
+@mixin flex-direction($property){
+    -webkit-box-orient:$property;
+  -webkit-box-direction:$property;
+    -ms-flex-direction:$property;
+        flex-direction:$property;
+}
+@mixin flex-flow(){
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:row wrap;
+        flex-flow:row wrap;
+}
+@mixin order($property){
+    -ms-flex-order:$property;
+        order:$property;
+}
+/* flexbox mixin end*/
+
+@mixin list(){
+    list-style:none;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+@mixin breakpoint($point) {
+    
+    @if $point == desktop {
+        @media screen and (max-width: 1440px) { @content ; }
+    }
+    @else if $point == laptop {
+        @media screen and (max-width: 1300px) { @content ; }
+    }
+    @else if $point == laptop_h {
+        @media screen and (max-width: 1300px),screen and (max-height: 650px) { @content ; }
+    }
+    @else if $point == tablet {
+        @media screen and (max-width: 991px) { @content ; }
+    }
+    @else if $point == tablet-2 {
+        /* Request by Peter to try this breakpoint */
+        @media screen and (max-width: 960px) { @content ; }
+    }
+    @else if $point == mobile {
+        @media screen and (max-width: 768px) { @content ; }
+    }
+    @else if $point == small-device {
+        @media screen and (max-width: 619px) { @content ; }
+    }
+    @else if $point == bigmobile {
+        @media screen and (max-width: 520px) { @content ; }
+    }
+    @else if $point == micromobile {
+        @media screen and (max-width: 420px) { @content ; }
+    }
+}
+
+@mixin poppins-light{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+@mixin poppins-regular{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+@mixin poppins-medium{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+@mixin poppins-semibold{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+@mixin poppins-bold{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
